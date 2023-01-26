@@ -41,7 +41,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const [student,setStudent] = useState([])
 
 const getStudent = () => {
-  fetch("http://localhost:4000/allStudents/")
+  fetch("https://studentteacher.onrender.com/allStudents/")
   .then((data) => data.json())
   .then((lsts) => setStudent(lsts))
 }
@@ -50,7 +50,7 @@ useEffect(() => {getStudent()}, []);
 
   const deleteList = (_id) => {
   console.log("deleting", _id)
-  fetch(`http://localhost:4000/allStudents/delete/${_id}`,{
+  fetch(`https://studentteacher.onrender.com/allStudents/delete/${_id}`,{
     method:"DELETE"
   })
   .then(() => getStudent())

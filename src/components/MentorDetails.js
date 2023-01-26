@@ -41,7 +41,7 @@ function MentorDetails() {
     const [mentor,setMentor] = useState([])
 
 const getMentor = () => {
-    fetch("http://localhost:4000/mentors/")
+    fetch("https://studentteacher.onrender.com/mentors/")
     .then((data) => data.json())
     .then((lsts) => setMentor(lsts))
 }
@@ -49,7 +49,7 @@ useEffect(() => {getMentor()},[])
 
 const deleteList = (_id) => {
   console.log("deleting", _id)
-  fetch(`http://localhost:4000/mentors/delete/${_id}`,{
+  fetch(`https://studentteacher.onrender.com/mentors/delete/${_id}`,{
     method:"DELETE"
   })
   .then(() => getMentor())

@@ -21,7 +21,7 @@ function AddMentor() {
         }
       ]
 
-      fetch("http://localhost:4000/mentors/add",{
+      fetch("https://studentteacher.onrender.com/mentors/add",{
         method:"POST",
         body: JSON.stringify(newMentor),
         headers: {

@@ -10,7 +10,7 @@ function EditMentor() {
     const [list,setList] = useState([])
 
     useEffect(() => {
-       fetch(`http://localhost:4000/mentors/${_id}`)
+       fetch(`https://studentteacher.onrender.com/mentors/${_id}`)
         .then((data) => data.json())
         .then((lsts) => setList(lsts))
     }, [_id]);
@@ -50,7 +50,7 @@ function Editform({row}){
       Batch:data.Batch
       }
 
-    fetch(`http://localhost:4000/mentors/update/${_id}`,{
+    fetch(`https://studentteacher.onrender.com/mentors/update/${_id}`,{
       method:"PUT",
       body: JSON.stringify(editMentor),
       headers: {

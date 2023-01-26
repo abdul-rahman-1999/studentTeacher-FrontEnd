@@ -19,7 +19,7 @@ const [id,setId] = useState("")
         Mentor:Mentor
       }]
 
-      fetch("http://localhost:4000/allStudents/add",{
+      fetch("https://studentteacher.onrender.com/allStudents/add",{
         method:"POST",
         body: JSON.stringify(newStudents),
         headers: {

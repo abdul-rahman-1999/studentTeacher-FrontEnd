@@ -12,7 +12,7 @@ const { _id } = useParams()
 const [list,setList] = useState([])
 
 useEffect(() => {
-fetch(`http://localhost:4000/allStudents/${_id}`)
+fetch(`https://studentteacher.onrender.com/allStudents/${_id}`)
 .then((datas) => datas.json())
 .then((lst) => setList(lst))
 }, []);
@@ -50,7 +50,7 @@ function Edit({row}){
       Mentor:data.Mentor
       }
 
-    fetch(`http://localhost:4000/allStudents/update/${_id}`,{
+    fetch(`https://studentteacher.onrender.com/allStudents/update/${_id}`,{
       method:"PUT",
       body: JSON.stringify(editstudent),
       headers: {
